@@ -1,0 +1,70 @@
+<html>
+<title>W3.CSS</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        #header-image {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+    <header>
+        <img id="header-image" src="zoo.jpg" alt="Header Image">
+    </header>
+<div class="w3-bar w3-orange">
+ <button class="w3-bar-item w3-button" onclick="openZoo('HOME')">HOME</button>
+ <button class="w3-bar-item w3-button" onclick="openZoo('ANIMAL SPECIES')">ANIMAL SPESIES</button>
+ <button class="w3-bar-item w3-button" onclick="openZoo('POPULATION')">POPULATION</button>
+ <button class="w3-bar-item w3-button" onclick="openZoo('CREATOR')">CREATOR</button>
+</div>
+<div id="HOME" class="w3-container zoo w3-center" style="display:none">
+    <h2>WELCOME</h2>
+    <img class="w3-animate-fading" src="homezoo.jpg" style="width:25%">
+</div>
+<div id="ANIMAL SPECIES" class="w3-container zoo w3-center w3-animate-bottom" style="display:none">
+    <img src="eagle.jpg" alt="eagle" style="width:25%">
+    <p><b>ELANG</b></p>
+    <img src="elephant.jpg" alt="elephant" style="width:25%">
+    <p><b>GAJAH</b></p>
+    <img src="tigers.jpg" alt="tigers" style="width:25%">
+    <p><b>HARIMAU</b></p>
+    <img src="crocodile.jpg" alt="crocodile" style="width:25%">
+    <p><b>BUAYA</b></p>
+</div>
+<div id="POPULATION" class="w3-container zoo w3-center w3-animate-top" style="display:none">
+    <img src="tigers.jpg" alt="tigers" style="width:20%">
+    <p><b>HARIMAU</b></p>
+    <p>Populasi harimau sumatera yang hanya <u>sekitar 400 ekor saat ini</u> tersisa di dalam blok-blok hutan dataran rendah, 
+    lahan gambut, dan hutan hujan pegunungan. Sebagian besar kawasan tersebut  telah mengalami pembukaan hutan untuk 
+    lahan pertanian ataupun perkebunan sehingga habitat kucing besar ini semakin berkurang.</p>
+</div>
+<div id="CREATOR" class="w3-container zoo w3-center w3-animate-zoom" style="display:none">
+    <img src="creator.jpg" alt="creator" style="width:50%">
+    <p>Nama:Andre Zuhair Lubis</p>
+    <p>Nim:10123707</p>
+    <p>Kelas:IF-11</p>
+
+</div>
+<script>
+function openZoo(namazoo) {
+ var i;
+ var x = document.getElementsByClassName("zoo");
+ for (i = 0; i < x.length; i++) {
+ x[i].style.display = "none"; 
+ }
+ document.getElementById(namazoo).style.display = "block"; 
+}
+</script>
+</body>
+</html>
